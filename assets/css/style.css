@@ -108,3 +108,11 @@ body {
 td {
   padding: 4% 0%;
 }
+
+.form-horizontal {
+  padding: 8% 16%;
+}
+
+.form_title {
+  padding-top: -8%;
+}
