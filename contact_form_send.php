@@ -20,7 +20,7 @@ if(isset($_POST['email'])) {
         !isset($_POST['telephone']) ||
         !isset($_POST['message'])) {
 
-        died("I'm sorry, but there appears to be a problem with the form you submitted.");
+        die("I'm sorry, but there appears to be a problem with the form you submitted.");
     }
 
     $name = $_POST['name']; // required
@@ -54,7 +54,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
     $email_message .= "Message: ".clean_string($message)."\n";
-    // create email headers
+    // create email headersn
     $headers = 'From: '.$email_from."\r\n".
     'Reply-To: '.$email_from."\r\n" .
     'X-Mailer: PHP/' . phpversion();
@@ -62,4 +62,5 @@ if(isset($_POST['email'])) {
     echo "true";
 
     die();
+}
 ?>
